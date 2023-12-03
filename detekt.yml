@@ -1,0 +1,50 @@
+# buildUponDefaultConfig is active; add only the rules that require explicit configuration here
+potential-bugs:
+  Deprecation:
+    active: true
+
+style:
+  MaxLineLength:
+    active: true
+    maxLineLength: 180
+  # wildcards are used all over the project
+  WildcardImport:
+    active: false
+  ReturnCount:
+    max: 3
+  MagicNumber:
+    active: false
+  UnusedPrivateMember:
+    active: true
+    excludes: [
+      "**/AlmostDone/StringFunctions/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
+      "**/AlmostDone/When/src/main/kotlin/jetbrains/kotlin/course/almost/done/Main.kt",
+      "**/TheFirstDateWithProgramming/ReadUserInput/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
+      "**/TheFirstDateWithProgramming/Variables/src/main/kotlin/jetbrains/kotlin/course/first/date/Main.kt",
+      "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/If/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/Loops/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+
+    ]
+  FunctionOnlyReturningConstant:
+    active: true
+    excludes: [
+      "**/WarmUp/Collections/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CollectionsPartTwo/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/CustomFunctions/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/FinishBaseGame/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/If/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+      "**/WarmUp/Loops/src/main/kotlin/jetbrains/kotlin/course/warmup/Main.kt",
+    ]
+
+complexity:
+  TooManyFunctions:
+    active: true
+    thresholdInFiles: 20
+
+exceptions:
+  active: true
+  InstanceOfCheckForException:
+    active: false
