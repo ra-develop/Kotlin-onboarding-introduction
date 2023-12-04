@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-12-03T22:58:16" hostname="McBkPr14M1Pr20vi5.local" time="0.223">
+<testsuite name="Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-12-04T09:44:11" hostname="McBkPr14M1Pr20vi5.local" time="0.243">
   <properties/>
-  <testcase name="testCountPartialMatchesFunction()" classname="Test" time="0.206"/>
-  <testcase name="testSolution()" classname="Test" time="0.011"/>
+  <testcase name="testCountPartialMatchesFunction()" classname="Test" time="0.22"/>
+  <testcase name="testSolution()" classname="Test" time="0.015"/>
   <testcase name="testCountGenerateSecretFunction()" classname="Test" time="0.001"/>
   <testcase name="testCountExactMatchesFunction()" classname="Test" time="0.001"/>
+  <testcase name="testPlayGameFunction()" classname="Test" time="0.001"/>
   <testcase name="testGetGameRulesFunction()" classname="Test" time="0.001"/>
+  <testcase name="testIsCompleteFunction()" classname="Test" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
