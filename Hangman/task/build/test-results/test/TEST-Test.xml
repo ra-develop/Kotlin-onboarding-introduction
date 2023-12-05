@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-12-05T19:17:43" hostname="McBkPr14M1Pr20vi5.local" time="0.209">
+  <properties/>
+  <testcase name="[1] BOOK, A, _ _ _ _, null" classname="Test" time="0.033"/>
+  <testcase name="[2] BOOK, A, _ O O _, null" classname="Test" time="0.0"/>
+  <testcase name="[3] BOOK, A, _ _ _ K, null" classname="Test" time="0.001"/>
+  <testcase name="[4] BOOK, B, _ _ _ _, B _ _ _" classname="Test" time="0.0"/>
+  <testcase name="[5] BOOK, B, _ O O _ , B O O _" classname="Test" time="0.001"/>
+  <testcase name="[6] BOOK, K, _ _ _ K, null" classname="Test" time="0.001"/>
+  <testcase name="[1] TestMethod(name=generateNewUserWord, returnType=TestKotlinType(type=String, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=secret, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=guess, javaType=Char, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=currentUserWord, javaTyp…" classname="Test" time="0.158"/>
+  <testcase name="[2] TestMethod(name=isComplete, returnType=TestKotlinType(type=Boolean, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=secret, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=currentGuess, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false)], returnTypeJava=null, visibility=PUBLIC, …" classname="Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
