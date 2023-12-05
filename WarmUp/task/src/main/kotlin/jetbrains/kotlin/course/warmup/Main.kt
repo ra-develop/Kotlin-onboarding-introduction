@@ -1,17 +1,30 @@
 package jetbrains.kotlin.course.warmup
 
 
-fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String): String {
-    return "Welcome to the game! \n" +
+fun getGameRules(wordLength: Int, maxAttemptsCount: Int, secretExample: String, alphabet: String): String {
+/*    return "Welcome to the game! \n" +
             "\n" +
             "Two people play this game: one chooses a word (a sequence of letters), the other guesses it. In this version, the computer chooses the word: a sequence of $wordLength letters (for example, $secretExample). The user has several attempts to guess it (the max number is $maxAttemptsCount). For each attempt, the number of complete matches (letter and position) and partial matches (letter only) is reported. \n" +
             "\n" +
-            "For example, with $secretExample as the hidden word, the BCDF guess will give 1 full match (C) and 1 partial match (B)."
+            "For example, with $secretExample as the hidden word, the BCDF guess will give 1 full match (C) and 1 partial match (B)." +
+            "\n" +
+            "The possible symbols in the word: $alphabet"
+    */
+
+    return """
+Welcome to the game! 
+
+Two people play this game: one chooses a word (a sequence of letters), the other guesses it. In this version, the computer chooses the word: a sequence of $wordLength letters (for example, $secretExample). The user has several attempts to guess it (the max number is $maxAttemptsCount). For each attempt, the number of complete matches (letter and position) and partial matches (letter only) is reported. The possible symbols in the word: $alphabet. 
+
+For example, with $secretExample as the hidden word, the BCDF guess will give 1 full match (C) and 1 partial match (B).
+
+""".trimIndent()
 
 }
 
-fun generateSecret(): String {
-    return "ABCD"
+fun generateSecret(wordLength: Int, alphabet: String): String {
+    val secret = List(wordLength) {alphabet.random()}
+    return secret.joinToString("")
 }
 
 fun countPartialMatches(secret: String, guess: String): Int {
@@ -73,10 +86,11 @@ fun main() {
     val wordLength = 4
     val maxAttemptsCount = 3
     val secretExample = "ACEB"
+    val alphabet = "ABCDEFGH"
 
-    println(getGameRules(wordLength, maxAttemptsCount, secretExample))
+    println(getGameRules(wordLength, maxAttemptsCount, secretExample, alphabet))
 
-    val secret = generateSecret()
+    val secret = generateSecret(wordLength, alphabet)
 
     playGame(secret, wordLength, maxAttemptsCount)
 }
