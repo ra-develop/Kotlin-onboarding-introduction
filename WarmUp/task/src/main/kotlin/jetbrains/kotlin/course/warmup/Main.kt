@@ -14,11 +14,29 @@ fun generateSecret(): String {
     return "ABCD"
 }
 
-fun countPartialMatches(secret: String, guess: String): Int = TODO("Not implemented yet")
+fun countPartialMatches(secret: String, guess: String): Int {
+    var guessInSecret = 0
+    for (symbol in secret) {
+        if (guess.any { it == symbol }) { guessInSecret++ }
+    }
+    var secretInGuess = 0
+    for (symbol in guess) {
+        if (secret.any { it == symbol }) { secretInGuess++ }
+    }
+    val result = minOf(guessInSecret, secretInGuess)
 
-fun countExactMatches(secret: String, guess: String): Int = TODO("Not implemented yet")
+    return result - countExactMatches(secret, guess)
+}
 
-fun isComplete(secret: String, guess: String): Boolean = true
+fun countExactMatches(secret: String, guess: String): Int {
+    return secret.filterIndexed { index, symbol ->
+        guess[index] == symbol
+    }.length
+}
+
+fun isComplete(secret: String, guess: String): Boolean
+    = secret == guess
+
 
 fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete = false

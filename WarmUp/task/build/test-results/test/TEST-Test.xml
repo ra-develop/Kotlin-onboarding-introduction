@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-12-04T09:44:11" hostname="McBkPr14M1Pr20vi5.local" time="0.243">
+<testsuite name="Test" tests="34" skipped="0" failures="0" errors="0" timestamp="2023-12-05T10:35:03" hostname="McBkPr14M1Pr20vi5.local" time="0.297">
   <properties/>
-  <testcase name="testCountPartialMatchesFunction()" classname="Test" time="0.22"/>
-  <testcase name="testSolution()" classname="Test" time="0.015"/>
-  <testcase name="testCountGenerateSecretFunction()" classname="Test" time="0.001"/>
-  <testcase name="testCountExactMatchesFunction()" classname="Test" time="0.001"/>
-  <testcase name="testPlayGameFunction()" classname="Test" time="0.001"/>
+  <testcase name="testCountPartialMatchesFunction()" classname="Test" time="0.208"/>
+  <testcase name="testSolution()" classname="Test" time="0.013"/>
+  <testcase name="[1] ACEB, BCDF, 1, 1" classname="Test" time="0.015"/>
+  <testcase name="[2] ABCD, ABCD, 4, 0" classname="Test" time="0.0"/>
+  <testcase name="[3] ABCD, DCBA, 0, 4" classname="Test" time="0.001"/>
+  <testcase name="[4] ABCD, DBCA, 2, 2" classname="Test" time="0.001"/>
+  <testcase name="[5] ABCD, EBCF, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[6] AAAA, AAAA, 4, 0" classname="Test" time="0.0"/>
+  <testcase name="[7] AAAA, BBBB, 0, 0" classname="Test" time="0.0"/>
+  <testcase name="[8] AABB, BBAA, 0, 4" classname="Test" time="0.0"/>
+  <testcase name="[9] ABCD, ABBA, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[10] ABBA, ABCD, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[11] AAAA, ABBB, 1, 0" classname="Test" time="0.0"/>
+  <testcase name="[12] BBBB, BBDH, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[13] AAAA, ABCD, 1, 0" classname="Test" time="0.0"/>
+  <testcase name="testCountGenerateSecretFunction()" classname="Test" time="0.0"/>
+  <testcase name="testCountExactMatchesFunction()" classname="Test" time="0.008"/>
+  <testcase name="[1] ACEB, BCDF, 1, 1" classname="Test" time="0.001"/>
+  <testcase name="[2] ABCD, ABCD, 4, 0" classname="Test" time="0.001"/>
+  <testcase name="[3] ABCD, DCBA, 0, 4" classname="Test" time="0.0"/>
+  <testcase name="[4] ABCD, DBCA, 2, 2" classname="Test" time="0.0"/>
+  <testcase name="[5] ABCD, EBCF, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[6] AAAA, AAAA, 4, 0" classname="Test" time="0.001"/>
+  <testcase name="[7] AAAA, BBBB, 0, 0" classname="Test" time="0.001"/>
+  <testcase name="[8] AABB, BBAA, 0, 4" classname="Test" time="0.001"/>
+  <testcase name="[9] ABCD, ABBA, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[10] ABBA, ABCD, 2, 0" classname="Test" time="0.0"/>
+  <testcase name="[11] AAAA, ABBB, 1, 0" classname="Test" time="0.001"/>
+  <testcase name="[12] BBBB, BBDH, 2, 0" classname="Test" time="0.001"/>
+  <testcase name="[13] AAAA, ABCD, 1, 0" classname="Test" time="0.001"/>
   <testcase name="testGetGameRulesFunction()" classname="Test" time="0.001"/>
   <testcase name="testIsCompleteFunction()" classname="Test" time="0.001"/>
+  <testcase name="[1] ACEB, BCDF, false" classname="Test" time="0.002"/>
+  <testcase name="[2] ACEB, ACEB, true" classname="Test" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
