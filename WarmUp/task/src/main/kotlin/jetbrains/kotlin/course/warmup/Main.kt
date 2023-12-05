@@ -37,17 +37,37 @@ fun countExactMatches(secret: String, guess: String): Int {
 fun isComplete(secret: String, guess: String): Boolean
     = secret == guess
 
+fun isWin(complete: Boolean, attempts: Int, maxAttemptsCount: Int): Boolean =
+    attempts <= maxAttemptsCount && complete
+fun isLoss(complete: Boolean, attempts: Int, maxAttemptsCount: Int): Boolean =
+    attempts > maxAttemptsCount && !complete
 
 fun playGame(secret: String, wordLength: Int, maxAttemptsCount: Int) {
     var complete = false
     var attempts = 0
-    while(!complete /*&& attempts < maxAttemptsCount*/) {
+    while(!complete) {
+        println("Please input your guess. It should be of length $wordLength.")
         val guess = safeReadLine()
-//        attempts++
         complete = isComplete(secret, guess)
+        printRoundResults(secret, guess)
+        attempts++
+        if (isWin(complete, attempts, maxAttemptsCount)) {
+            println("Congratulations! You guessed it!")
+            break
+        } else if (isLoss(complete, attempts, maxAttemptsCount)) {
+            println("Sorry, you lost! :( My word is $secret")
+            break
+        }
     }
 }
 
+// = TODO("Not implemented yet")
+
+fun printRoundResults(secret: String, guess: String) {
+    val exactMatches = countExactMatches(secret, guess)
+    val partialMatches = countPartialMatches(secret, guess)
+    println("Your guess has $exactMatches full matches and $partialMatches partial matches.")
+}
 
 fun main() {
     val wordLength = 4
@@ -57,8 +77,6 @@ fun main() {
     println(getGameRules(wordLength, maxAttemptsCount, secretExample))
 
     val secret = generateSecret()
-
-    println("Please input your guess. It should be of length $wordLength.")
 
     playGame(secret, wordLength, maxAttemptsCount)
 }
