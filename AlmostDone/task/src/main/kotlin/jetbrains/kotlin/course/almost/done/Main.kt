@@ -66,6 +66,29 @@ fun applyBorderLine(maxLineLength: Int): String {
     return borderSymbol.toString().repeat(maxLineLength + lengthToSquare)
 }
 
+fun safeReadLine(): String = readlnOrNull() ?: error("Find null value")
+
+fun chooseFilter(): String {
+    println("Please choose the filter: 'borders' or 'squared'.")
+    var filter = ""
+    while(true) {
+        filter = safeReadLine()
+        if (isCorrectFilter(filter)) {
+            break
+        } else {
+            println("Please input 'borders' or 'squared'")
+        }
+    }
+    return filter
+}
+
+fun isCorrectFilter(filter: String): Boolean {
+    return when (filter) {
+        "borders", "squared" -> true
+        else -> false
+    }
+}
+
 fun main() {
     // Write your solution in this file
 }
