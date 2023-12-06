@@ -10,7 +10,25 @@ fun applyFilter(trimmedPictures: String, filterName: String): String {
    }
 }
 
-fun applyBordersFilter(trimmedPictures: String): String = TODO("Not yet implemented")
+fun applyBordersFilter(trimmedPictures: String): String {
+    val lines = trimmedPictures.lines()
+    val maxLineLength = lines.maxBy { it.length }.length
+    val lengthToSquare = 4
+
+    val sb = StringBuilder()
+    sb.append(borderSymbol.toString().repeat(maxLineLength + lengthToSquare) + newLineSymbol)
+    for (line in lines) {
+        sb.append("$borderSymbol$separator")
+        if (line.length < maxLineLength) {
+            sb.append(line.padEnd(maxLineLength, separator))
+        } else {
+            sb.append(line)
+        }
+        sb.append("$separator$borderSymbol$newLineSymbol")
+    }
+    sb.append(borderSymbol.toString().repeat(maxLineLength + lengthToSquare))
+    return sb.toString()
+}
 
 fun applySquaredFilter(trimmedPictures: String): String = TODO("Not yet implemented")
 
