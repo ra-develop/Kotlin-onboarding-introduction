@@ -1,42 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test" tests="37" skipped="0" failures="0" errors="0" timestamp="2023-12-06T20:08:19" hostname="McBkPr14M1Pr20vi5.local" time="0.312">
+<testsuite name="Test" tests="59" skipped="0" failures="0" errors="0" timestamp="2023-12-06T20:40:25" hostname="McBkPr14M1Pr20vi5.local" time="0.354">
   <properties/>
-  <testcase name="testTrimPictureFunction()" classname="Test" time="0.212"/>
-  <testcase name="[1] SPONGE_BOB" classname="Test" time="0.024"/>
+  <testcase name="testTrimPictureFunction()" classname="Test" time="0.247"/>
+  <testcase name="[1] SPONGE_BOB" classname="Test" time="0.021"/>
   <testcase name="[2] SIMBA" classname="Test" time="0.001"/>
   <testcase name="[3] BRIAN_GRIFFIN" classname="Test" time="0.001"/>
   <testcase name="[4] CAT" classname="Test" time="0.001"/>
   <testcase name="[5] PIG" classname="Test" time="0.001"/>
   <testcase name="[6] FOX" classname="Test" time="0.001"/>
-  <testcase name="[7] MONKEY" classname="Test" time="0.001"/>
+  <testcase name="[7] MONKEY" classname="Test" time="0.0"/>
   <testcase name="[8] ELEPHANT" classname="Test" time="0.001"/>
-  <testcase name="[9] ANDROID" classname="Test" time="0.0"/>
+  <testcase name="[9] ANDROID" classname="Test" time="0.001"/>
   <testcase name="[10] APPLE" classname="Test" time="0.001"/>
   <testcase name="[11] CUSTOM" classname="Test" time="0.0"/>
-  <testcase name="testApplyBordersFilterFunction()" classname="Test" time="0.007"/>
-  <testcase name="testApplySquaredFilterFunction()" classname="Test" time="0.001"/>
   <testcase name="[1] SPONGE_BOB" classname="Test" time="0.001"/>
-  <testcase name="[2] SIMBA" classname="Test" time="0.0"/>
-  <testcase name="[3] BRIAN_GRIFFIN" classname="Test" time="0.001"/>
+  <testcase name="[2] SIMBA" classname="Test" time="0.001"/>
+  <testcase name="[3] BRIAN_GRIFFIN" classname="Test" time="0.0"/>
   <testcase name="[4] CAT" classname="Test" time="0.001"/>
   <testcase name="[5] PIG" classname="Test" time="0.001"/>
   <testcase name="[6] FOX" classname="Test" time="0.001"/>
-  <testcase name="[7] MONKEY" classname="Test" time="0.001"/>
+  <testcase name="[7] MONKEY" classname="Test" time="0.0"/>
+  <testcase name="[8] ELEPHANT" classname="Test" time="0.0"/>
+  <testcase name="[9] ANDROID" classname="Test" time="0.0"/>
+  <testcase name="[10] APPLE" classname="Test" time="0.0"/>
+  <testcase name="[11] CUSTOM" classname="Test" time="0.0"/>
+  <testcase name="testApplyBordersFilterFunction()" classname="Test" time="0.007"/>
+  <testcase name="[1] SPONGE_BOB" classname="Test" time="0.001"/>
+  <testcase name="[2] SIMBA" classname="Test" time="0.0"/>
+  <testcase name="[3] BRIAN_GRIFFIN" classname="Test" time="0.001"/>
+  <testcase name="[4] CAT" classname="Test" time="0.0"/>
+  <testcase name="[5] PIG" classname="Test" time="0.0"/>
+  <testcase name="[6] FOX" classname="Test" time="0.0"/>
+  <testcase name="[7] MONKEY" classname="Test" time="0.0"/>
   <testcase name="[8] ELEPHANT" classname="Test" time="0.001"/>
   <testcase name="[9] ANDROID" classname="Test" time="0.0"/>
   <testcase name="[10] APPLE" classname="Test" time="0.0"/>
-  <testcase name="[11] CUSTOM" classname="Test" time="0.001"/>
+  <testcase name="[11] CUSTOM" classname="Test" time="0.0"/>
+  <testcase name="testApplySquaredFilterFunction()" classname="Test" time="0.001"/>
+  <testcase name="[1] SPONGE_BOB" classname="Test" time="0.0"/>
+  <testcase name="[2] SIMBA" classname="Test" time="0.001"/>
+  <testcase name="[3] BRIAN_GRIFFIN" classname="Test" time="0.001"/>
+  <testcase name="[4] CAT" classname="Test" time="0.0"/>
+  <testcase name="[5] PIG" classname="Test" time="0.0"/>
+  <testcase name="[6] FOX" classname="Test" time="0.001"/>
+  <testcase name="[7] MONKEY" classname="Test" time="0.0"/>
+  <testcase name="[8] ELEPHANT" classname="Test" time="0.0"/>
+  <testcase name="[9] ANDROID" classname="Test" time="0.001"/>
+  <testcase name="[10] APPLE" classname="Test" time="0.001"/>
+  <testcase name="[11] CUSTOM" classname="Test" time="0.0"/>
   <testcase name="[1] SPONGE_BOB" classname="Test" time="0.001"/>
   <testcase name="[2] SIMBA" classname="Test" time="0.0"/>
   <testcase name="[3] BRIAN_GRIFFIN" classname="Test" time="0.0"/>
   <testcase name="[4] CAT" classname="Test" time="0.001"/>
   <testcase name="[5] PIG" classname="Test" time="0.001"/>
   <testcase name="[6] FOX" classname="Test" time="0.0"/>
-  <testcase name="[7] MONKEY" classname="Test" time="0.0"/>
-  <testcase name="[8] ELEPHANT" classname="Test" time="0.001"/>
+  <testcase name="[7] MONKEY" classname="Test" time="0.001"/>
+  <testcase name="[8] ELEPHANT" classname="Test" time="0.0"/>
   <testcase name="[9] ANDROID" classname="Test" time="0.001"/>
-  <testcase name="[10] APPLE" classname="Test" time="0.001"/>
-  <testcase name="[11] CUSTOM" classname="Test" time="0.0"/>
+  <testcase name="[10] APPLE" classname="Test" time="0.0"/>
+  <testcase name="[11] CUSTOM" classname="Test" time="0.001"/>
   <testcase name="testApplyFilterFunction()" classname="Test" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -13,10 +13,10 @@ fun applyFilter(trimmedPictures: String, filterName: String): String {
 fun applyBordersFilter(trimmedPictures: String): String {
     val lines = trimmedPictures.lines()
     val maxLineLength = lines.maxBy { it.length }.length
-    val lengthToSquare = 4
+//    val lengthToSquare = 4
 
     val sb = StringBuilder()
-    sb.append(borderSymbol.toString().repeat(maxLineLength + lengthToSquare) + newLineSymbol)
+    sb.append(applyBorderLine(maxLineLength) + newLineSymbol)
     for (line in lines) {
         sb.append("$borderSymbol$separator")
         if (line.length < maxLineLength) {
@@ -26,11 +26,45 @@ fun applyBordersFilter(trimmedPictures: String): String {
         }
         sb.append("$separator$borderSymbol$newLineSymbol")
     }
-    sb.append(borderSymbol.toString().repeat(maxLineLength + lengthToSquare))
+    sb.append(applyBorderLine(maxLineLength))
     return sb.toString()
 }
 
-fun applySquaredFilter(trimmedPictures: String): String = TODO("Not yet implemented")
+fun applySquaredFilter(trimmedPictures: String): String {
+    val lines = trimmedPictures.lines()
+    val maxLineLength = lines.maxBy { it.length }.length
+//    val lengthToSquare = 4
+
+    val sb = StringBuilder()
+    sb.append(applyBorderLine(maxLineLength))
+    sb.append(applyBorderLine(maxLineLength) + newLineSymbol)
+    for (i in 0 .. 1) {
+        for (line in lines) {
+            sb.append("$borderSymbol$separator")
+            if (line.length < maxLineLength) {
+                sb.append(line.padEnd(maxLineLength, separator))
+                sb.append("$separator$borderSymbol")
+                sb.append("$borderSymbol$separator")
+                sb.append(line.padEnd(maxLineLength, separator))
+            } else {
+                sb.append(line)
+                sb.append("$separator$borderSymbol")
+                sb.append("$borderSymbol$separator")
+                sb.append(line)
+            }
+            sb.append("$separator$borderSymbol$newLineSymbol")
+        }
+        sb.append(applyBorderLine(maxLineLength))
+        sb.append(applyBorderLine(maxLineLength) + newLineSymbol)
+    }
+
+    return sb.toString()
+}
+
+fun applyBorderLine(maxLineLength: Int): String {
+    val lengthToSquare = 4
+    return borderSymbol.toString().repeat(maxLineLength + lengthToSquare)
+}
 
 fun main() {
     // Write your solution in this file
