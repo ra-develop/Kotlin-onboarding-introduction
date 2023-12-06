@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">8</div>
+<div class="counter">25</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.195s</div>
+<div class="counter">0.420s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,21 +76,39 @@
 </tr>
 </thead>
 <tr>
-<td class="success">[1] TestMethod(name=generateNewUserWord, returnType=TestKotlinType(type=String, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=secret, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=guess, javaType=Char, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=currentUserWord, javaTyp…</td>
+<td class="success">[1] TestMethod(name=isCorrectInput, returnType=TestKotlinType(type=Boolean, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=userInput, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false)], returnTypeJava=null, visibility=PUBLIC, hasGeneratedPartInName=false)</td>
 <td class="success">testFunctions(TestMethod)[1]</td>
-<td class="success">0.158s</td>
+<td class="success">0.174s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">[2] TestMethod(name=isComplete, returnType=TestKotlinType(type=Boolean, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=secret, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=currentGuess, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false)], returnTypeJava=null, visibility=PUBLIC, …</td>
+<td class="success">[2] TestMethod(name=safeUserInput, returnType=TestKotlinType(type=Char, abbreviation=null, isNullable=false, params=[]), arguments=[], returnTypeJava=null, visibility=PUBLIC, hasGeneratedPartInName=false)</td>
 <td class="success">testFunctions(TestMethod)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] TestMethod(name=generateNewUserWord, returnType=TestKotlinType(type=String, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=secret, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=guess, javaType=Char, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=currentUserWord, javaTyp…</td>
+<td class="success">testFunctions(TestMethod)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] TestMethod(name=isComplete, returnType=TestKotlinType(type=Boolean, abbreviation=null, isNullable=false, params=[]), arguments=[TestVariable(name=secret, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false), TestVariable(name=currentGuess, javaType=String, value=null, kotlinType=null, visibility=null, mutability=null, isInPrimaryConstructor=false, isStatic=false, isConst=false)], returnTypeJava=null, visibility=PUBLIC, …</td>
+<td class="success">testFunctions(TestMethod)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGameImitation()</td>
+<td class="success">testGameImitation()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[1] BOOK, A, _ _ _ _, null</td>
 <td class="success">testGenerateNewUserWordImplementation(String, char, String, String)[1]</td>
-<td class="success">0.033s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -102,13 +120,13 @@
 <tr>
 <td class="success">[3] BOOK, A, _ _ _ K, null</td>
 <td class="success">testGenerateNewUserWordImplementation(String, char, String, String)[3]</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">[4] BOOK, B, _ _ _ _, B _ _ _</td>
 <td class="success">testGenerateNewUserWordImplementation(String, char, String, String)[4]</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -120,7 +138,91 @@
 <tr>
 <td class="success">[6] BOOK, K, _ _ _ K, null</td>
 <td class="success">testGenerateNewUserWordImplementation(String, char, String, String)[6]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] BOOK, _ _ _ _, false</td>
+<td class="success">testIsCompleteImplementation(String, String, boolean)[1]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] BOOK, _ O O _ , false</td>
+<td class="success">testIsCompleteImplementation(String, String, boolean)[2]</td>
 <td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] BOOK, B O O K, true</td>
+<td class="success">testIsCompleteImplementation(String, String, boolean)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] ABCD, false</td>
+<td class="success">testIsCorrectInputImplementation(String, boolean)[1]</td>
+<td class="success">0.028s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] abc, false</td>
+<td class="success">testIsCorrectInputImplementation(String, boolean)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] 1, false</td>
+<td class="success">testIsCorrectInputImplementation(String, boolean)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] 1a, false</td>
+<td class="success">testIsCorrectInputImplementation(String, boolean)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] , false</td>
+<td class="success">testIsCorrectInputImplementation(String, boolean)[5]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] [AB, abc, 1, b], B</td>
+<td class="success">testSafeUserInputImplementation(List, char)[1]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] [b], B</td>
+<td class="success">testSafeUserInputImplementation(List, char)[2]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] [AB, abc, 1, b, c], B</td>
+<td class="success">testSafeUserInputImplementation(List, char)[3]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] [AB, abc, 1, b, c1d], B</td>
+<td class="success">testSafeUserInputImplementation(List, char)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] [b, c], B</td>
+<td class="success">testSafeUserInputImplementation(List, char)[5]</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSolution()</td>
+<td class="success">testSolution()</td>
+<td class="success">0.203s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -133,7 +235,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2</a> at Dec 5, 2023, 8:17:43 PM</p>
+<a href="http://www.gradle.org">Gradle 8.2</a> at Dec 6, 2023, 6:45:16 PM</p>
 </div>
 </div>
 </body>
