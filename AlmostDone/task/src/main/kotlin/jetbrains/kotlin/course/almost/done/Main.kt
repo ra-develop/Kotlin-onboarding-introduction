@@ -125,6 +125,15 @@ fun getPicture(): String {
     return picture
 }
 
+fun photoshop() {
+    val picture = trimPicture(getPicture())
+    val filter = chooseFilter()
+    println("The old image:")
+    println(picture)
+    println("The transformed picture:")
+    println(applyFilter(picture, filter))
+}
+
 fun main() {
-    // Write your solution in this file
+    photoshop()
 }
