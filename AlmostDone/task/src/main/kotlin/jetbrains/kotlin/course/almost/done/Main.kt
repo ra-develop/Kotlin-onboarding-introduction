@@ -75,9 +75,8 @@ fun chooseFilter(): String {
         filter = safeReadLine()
         if (isCorrectFilter(filter)) {
             break
-        } else {
-            println("Please input 'borders' or 'squared'")
         }
+        println("Please input 'borders' or 'squared'")
     }
     return filter
 }
@@ -87,6 +86,43 @@ fun isCorrectFilter(filter: String): Boolean {
         "borders", "squared" -> true
         else -> false
     }
+}
+
+fun choosePicture(): String {
+    while (true) {
+        println("Please, choose a picture. The possible options: ${allPictures().joinToString(", ")}")
+        val pictureName = readlnOrNull()
+        pictureName?.let { pictName ->
+            if (allPictures().contains(pictName)) {
+                val picture = getPictureByName(pictName)
+                picture?.let {
+                    return@choosePicture it
+                }
+            }
+        }
+    }
+}
+
+fun getPicture(): String {
+    println("Do you want to use a pre-defined picture or use a custom one? Please, input 'yes' for a pre-defined image or 'no' for a custom one")
+    var picture = ""
+    while (true) {
+        val userAnswer = safeReadLine()
+        when (userAnswer) {
+            "yes" -> {
+                picture = choosePicture()
+                break
+            }
+            "no" -> {
+                picture = safeReadLine()
+                break
+            }
+            else -> {
+                println("Please, input 'yes' or 'no'")
+            }
+        }
+    }
+    return picture
 }
 
 fun main() {
