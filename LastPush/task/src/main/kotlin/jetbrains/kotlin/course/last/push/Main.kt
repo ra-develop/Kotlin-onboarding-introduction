@@ -18,15 +18,6 @@ fun fillPattern(pattern: String): String {
 }
 fun getPatternHeight(pattern: String): Int = pattern.lines().size
 
-fun canvasGenerator(pattern: String, width: Int, height: Int): String {
-    val filledPattern = fillPattern(pattern)
-    var canvas = repeatHorizontally(filledPattern, width)
-    for (i in 2 .. height) {
-        canvas += repeatHorizontally(dropTopFromLine(filledPattern), width)
-    }
-    return canvas
-}
-
 fun dropTopFromLine(pattern: String): String {
     val patternLines = pattern.lines()
     if (patternLines.size == 1) {
@@ -45,6 +36,52 @@ fun repeatHorizontally(pattern: String, repeatNumber: Int): String {
         }
     }
     return sb.toString()
+}
+
+fun repeatHorizontallyWithGaps(pattern: String, repeatNumber: Int, level: Int): String {
+    val patternWidth = getPatternWidth(pattern)
+    val lines = pattern.lines()
+    val sb = StringBuilder()
+    sb.append(newLineSymbol)
+    for ((index, line) in lines.withIndex()) {
+        if (index != 0) {
+            sb.append(newLineSymbol)
+        }
+        for (i in 1 .. repeatNumber) {
+            if (level % 2 == 0) {
+                if (i % 2 == 0) {
+                    sb.append(line)
+                } else {
+                    sb.append(separator.toString().repeat(patternWidth))
+                }
+            } else {
+                if (i % 2 == 0) {
+                    sb.append(separator.toString().repeat(patternWidth))
+                } else {
+                    sb.append(line)
+                }
+            }
+        }
+    }
+    return sb.toString()
+}
+
+fun canvasGenerator(pattern: String, width: Int, height: Int): String {
+    val filledPattern = fillPattern(pattern)
+    var canvas = repeatHorizontally(filledPattern, width)
+    for (i in 2 .. height) {
+        canvas += repeatHorizontally(dropTopFromLine(filledPattern), width)
+    }
+    return canvas
+}
+
+fun canvasWithGapsGenerator(pattern: String, width: Int, height: Int): String {
+    val filledPattern = fillPattern(pattern)
+    var canvas = ""
+    for (i in 1 .. height ) {
+        canvas += repeatHorizontallyWithGaps(filledPattern, width, if (height == 2) { 1 } else { i })
+    }
+    return canvas
 }
 
 fun main() {
